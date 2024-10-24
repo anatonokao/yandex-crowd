@@ -1,0 +1,1626 @@
+/* ------------------ИМПОРТЫ/IMPORTS----------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..700&display=swap");
+
+/* ------------------ОБНУЛЕНИЕ/RESET------------------ */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+*,
+:after,
+:before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+a:visited {
+  color: inherit;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+td,
+th {
+  padding: 0;
+}
+
+/* ------------------СТИЛИ/STYLES------------------ */
+
+/* ------------------ОБЩИЕ/COMMON------------------ */
+body {
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #313131;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+  overflow-x: clip;
+}
+
+.container {
+  max-width: 1366px;
+  padding: 0 72px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1260px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    padding: 0 18px;
+  }
+}
+
+.primary-button,
+.secondary-button,
+.blue-button {
+  transition: all 0.3s ease;
+}
+
+.primary-button {
+  background-color: #1f1f1f;
+  color: #fff;
+
+  &:hover {
+    background-color: #fbce51;
+    color: #1f1f1f;
+  }
+}
+
+.secondary-button {
+  background-color: transparent;
+  border: 2px solid #1f1f1f;
+
+  &:hover {
+    background-color: #1f1f1f;
+    color: #fff;
+  }
+}
+
+.blue-button {
+  background-color: transparent;
+  border: 1px solid #3057a2;
+  color: #3057a2;
+
+  &:hover {
+    background-color: #3057a2;
+    color: #fff;
+  }
+}
+
+.link {
+  color: #3057a2;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #538cff;
+  }
+}
+
+.runline-text {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  width: max-content;
+  left: 0;
+  animation: runline 16s linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes runline {
+  from {
+    transform: translate(0, 50%);
+  }
+  to {
+    transform: translate(-50%, 50%);
+  }
+}
+
+.slider-dot-counter {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  cursor: pointer;
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: 6px;
+  }
+}
+
+.slider-dot-counter_active {
+  background-color: #313131;
+}
+
+.slider-counter {
+  font-family: "Golos Text", sans-serif;
+  line-height: 19px;
+  color: #949494;
+}
+
+.slider-slide-counter-current {
+  color: #313131;
+}
+
+/* ------------------ШАПКА/HEADER------------------ */
+
+.header {
+  background: url("assets/images/header-bg.jpg") no-repeat center;
+  background-size: cover;
+  background-position: bottom center;
+  position: relative;
+  padding-top: 26px;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  gap: 62px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header__logo-title {
+  font-family: "Golos Text", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: #595653;
+}
+
+.header__content {
+  width: 542px;
+}
+
+.header__title {
+  font-size: 60px;
+  line-height: 66px;
+  text-transform: uppercase;
+}
+
+.header__title_center {
+  text-align: center;
+}
+
+.header__subtitle {
+  font-family: "Golos Text", sans-serif;
+  font-size: 18px;
+  text-align: center;
+
+  &:not(:first-child) {
+    margin-top: 23px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.header__buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.header__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Golos Text", sans-serif;
+  padding: 12px 45px;
+  border-radius: 66px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  width: 263px;
+
+  &::first-line {
+    white-space: wrap;
+  }
+}
+
+.header__runline {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: #f54932;
+  color: #fff;
+  font-weight: 400;
+  overflow: hidden;
+
+  &:not(:first-child) {
+    margin-top: 131px;
+  }
+}
+
+.header__runline-text {
+  font-size: 22px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1260px) {
+  .header {
+    padding-top: 26px;
+  }
+
+  .header__container {
+    gap: 52px;
+  }
+
+  .header__subtitle {
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .header__title {
+    font-size: 50px;
+    line-height: 55px;
+  }
+}
+
+@media screen and (max-width: 1145px) {
+  .header__content {
+    width: 460px;
+  }
+
+  .header__subtitle {
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  .header__title {
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  .header__button {
+    padding: 10px 15px;
+  }
+
+  .header__runline:not(:first-child) {
+    margin-top: 89px;
+    height: 50px;
+  }
+
+  .header__runline-text {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .header {
+    padding-top: 18px;
+    gap: 42px;
+  }
+
+  .header__container {
+    gap: 42px;
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .header__content {
+    width: 392px;
+  }
+
+  .header__title {
+    font-size: 38px;
+    line-height: 42px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .header {
+    background: url("assets/images/header-bg-mobile.jpg") no-repeat center;
+    background-position: bottom;
+    background-size: cover;
+  }
+
+  .header__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .header__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 392px;
+  }
+
+  .header__button_outline {
+    background-color: #fff;
+    opacity: 0.9;
+    border: 1px solid transparent;
+
+    &:hover {
+      opacity: 1;
+      color: #fff;
+    }
+  }
+
+  .header__runline {
+    &:not(:first-child) {
+      margin-top: 261px;
+    }
+  }
+}
+
+@media screen and (max-width: 592px) {
+  .header__buttons {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .header__button {
+    width: 100%;
+    padding: 15px 30px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .header__title {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header {
+    background: url("assets/images/header-bg-mobile.jpg") no-repeat center;
+    background-position: -254px;
+    background-size: cover;
+  }
+
+  .header__logo-img {
+    width: 83px;
+  }
+
+  .header__logo-title {
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .header__content {
+    width: 100%;
+  }
+
+  .header__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .header__subtitle {
+    text-align: left;
+    &:not(:first-child) {
+      margin-top: 22px;
+      margin-bottom: 31px;
+    }
+  }
+
+  .header__buttons {
+    flex-direction: column;
+  }
+
+  .header__button {
+    padding: 12px 43px;
+    width: 100%;
+  }
+
+  .header__runline:not(:first-child) {
+    margin-top: 291px;
+    height: 38px;
+  }
+
+  .header__runline-text {
+    font-size: 16px;
+    line-height: 17px;
+  }
+}
+
+/* ------------------ОСНОВНОЕ/MAIN------------------ */
+
+/* поддержать Международный васюкинский турнир, Cеанс одновременной игры/support tournament, simultaneous games */
+
+.support-and-simultaneous-games {
+  margin-top: 80px;
+  margin-bottom: 165px;
+}
+
+.support-and-simultaneous-games__container {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.support-tournament {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.support-tournament_mobile {
+  display: none;
+}
+
+.support-tournament__title {
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 49px;
+
+  img {
+    max-width: 394px;
+    width: 100%;
+  }
+}
+
+.support-tournament__title_red {
+  color: #f54932;
+  font-weight: 700;
+}
+
+.simultaneous-games {
+  display: flex;
+  gap: 17px;
+}
+
+.simultaneous-games__img {
+  margin-left: -27px;
+  object-fit: contain;
+}
+
+.simultaneous-games__content {
+  margin-top: 46px;
+  display: flex;
+  flex-direction: column;
+}
+
+.simultaneous-games__title {
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 49px;
+
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+
+.simultaneous-games__title_red {
+  color: #f54932;
+  font-weight: 700;
+}
+
+.simultaneous-games__table {
+  font-family: "Golos Text", sans-serif;
+  font-size: 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 48px;
+  }
+
+  tr:not(:last-child) {
+    border-bottom: 2px solid #d0d0d0;
+  }
+
+  th {
+    text-align: left;
+    font-weight: 400;
+  }
+
+  td {
+    font-weight: 600;
+
+    &:not(:first-child) {
+      border-left: 2px solid #d0d0d0;
+    }
+  }
+
+  tr:not(:last-child):not(:first-child) {
+    th {
+      padding: 15px 0 15px;
+    }
+    td {
+      padding: 15px;
+    }
+  }
+
+  tr:first-child {
+    th {
+      padding: 0 15px 15px 0;
+    }
+    td {
+      padding: 0 15px 15px;
+    }
+  }
+
+  tr:last-child {
+    th {
+      padding: 15px 15px 0 0;
+    }
+    td {
+      padding: 15px 15px 0px;
+    }
+  }
+}
+
+.simultaneous-games__table_mobile {
+  display: none;
+}
+
+.simultaneous-games__table-through-line {
+  text-decoration: line-through #f54932;
+}
+
+.simultaneous-games__link {
+  font-family: "Golos Text", sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1075px) {
+  .support-tournament {
+    display: none;
+  }
+
+  .support-tournament_mobile {
+    display: block;
+  }
+
+  .support-tournament__title {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      margin: 30px auto 0;
+    }
+  }
+
+  .simultaneous-games {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .simultaneous-games__img {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .support-tournament__title,
+  .simultaneous-games__title {
+    font-size: 31px;
+    line-height: 38px;
+  }
+
+  .simultaneous-games__img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .support-and-simultaneous-games {
+    &:not(:last-child) {
+      margin-top: 48px;
+      margin-bottom: 123px;
+    }
+  }
+
+  .support-tournament {
+    display: none;
+  }
+
+  .support-tournament_mobile {
+    display: block;
+  }
+
+  .support-tournament__title {
+    font-size: 28px;
+    line-height: 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    .support-tournament__title_1 {
+      order: 1;
+    }
+
+    img {
+      order: 2;
+      margin: 0;
+    }
+
+    .support-tournament__title_2 {
+      order: 3;
+    }
+  }
+
+  .simultaneous-games {
+    flex-direction: column;
+    align-items: normal;
+    gap: 8px;
+  }
+
+  .simultaneous-games__img {
+    margin: 0 -20px;
+    width: auto;
+  }
+
+  .simultaneous-games__title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .simultaneous-games__content {
+    margin-top: 0px;
+  }
+
+  .simultaneous-games__title {
+    &:not(:last-child) {
+      margin-bottom: 44px;
+    }
+  }
+
+  .simultaneous-games__table {
+    display: none;
+  }
+
+  .simultaneous-games__table_mobile {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    tr:not(:last-child) {
+      border-bottom: 2px solid #d0d0d0;
+    }
+
+    th {
+      text-align: left;
+      font-weight: 400;
+    }
+
+    td {
+      font-weight: 600;
+
+      &:not(:first-child) {
+        border-left: none;
+      }
+    }
+
+    tr:not(:last-child):not(:first-child),
+    tr:first-child,
+    tr:last-child {
+      th,
+      td {
+        padding: 0;
+      }
+    }
+
+    tr:not(:last-child):not(:first-child) {
+      padding: 15px 0;
+    }
+
+    tr:first-child {
+      padding-bottom: 15px;
+    }
+
+    tr:last-child {
+      padding-top: 15px;
+    }
+  }
+
+  .simultaneous-games__link {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+/* ------------------Этапы преображения Васюков/TRANSFORMATION STAGES------------------ */
+
+.main__transformation-stages {
+  &:not(:last-child) {
+    margin-bottom: 200px;
+  }
+}
+
+.transformation-stages__container {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+.transformation-stages__title {
+  text-transform: uppercase;
+  font-size: 54px;
+  line-height: 65px;
+  max-width: 806px;
+}
+
+.transformation-stages__link {
+  display: inline-block;
+  max-width: 280px;
+  text-transform: none;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 400;
+
+  a {
+    display: block;
+    margin-left: 8px;
+    text-decoration: none;
+  }
+}
+
+.transformation-stages__content {
+  font-family: "Golos Text", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.transformation-stages__item_1 {
+  grid-row: 1 / 2;
+}
+
+.transformation-stages__item_2 {
+  grid-row: 1 / 2;
+}
+
+.transformation-stages__item_3 {
+  grid-row: 1 / 3;
+}
+
+.transformation-stages__item_4 {
+  grid-row: 2 / 3;
+}
+
+.transformation-stages__item_5 {
+  grid-row: 2 / 3;
+}
+
+.transformation-stages__item_6 {
+  grid-row: 3 / 4;
+}
+
+.transformation-stages__item_7 {
+  grid-column: 2 / 4;
+  span {
+    margin-right: 290px;
+  }
+}
+
+.transformation-stages__item {
+  display: flex;
+  background: url("assets/images/transformation-stages-item-bg.jpg") no-repeat
+    center;
+  background-size: cover;
+  gap: 16px;
+  padding: 20px 21px;
+  font-size: 20px;
+  font-family: "Golos Text", sans-serif;
+  position: relative;
+}
+
+.transformation-stages__item-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 11px 12px;
+  background-color: #fff;
+  border-radius: 60px;
+  font-weight: 600;
+}
+
+.transformation-stages__item-img {
+  position: absolute;
+  right: -44px;
+  bottom: 26px;
+}
+
+.transformation-stages__content_mobile {
+  display: none;
+  flex-direction: row;
+  margin-top: 148px;
+
+  .transformation-stages__slider-mobile {
+    display: flex;
+    width: 100%;
+    overflow-x: clip;
+    position: relative;
+    height: 300px;
+  }
+
+  .transformation-stages__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 62px 20px 37px;
+    position: relative;
+    width: 335px;
+  }
+
+  .transformation-stages__subitem {
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 87%;
+    left: 35px;
+    top: 45px;
+    transform: translateY(-100%);
+  }
+
+  .transformation-stages__item-badge {
+    font-size: 20px;
+    line-height: 24px;
+    min-width: 36px;
+    min-height: 36px;
+  }
+}
+
+.transformation-stages__slider-control-panel {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  .transformation-stages__slider-controller {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #313131;
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #fbce51;
+    }
+
+    &:disabled {
+      background-color: #d6d6d6;
+    }
+  }
+
+  .transformation-stages__slider-controller_prev {
+    transform: rotate(180deg);
+  }
+
+  &:not(:first-child) {
+    margin-top: 27px;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .transformation-stages__content {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .transformation-stages__item_1 {
+    grid-row: 1 / 2;
+  }
+  .transformation-stages__item_2 {
+    grid-row: 1 / 2;
+  }
+  .transformation-stages__item_3 {
+    grid-row: 2 / 5;
+  }
+  .transformation-stages__item_4 {
+    grid-row: 2 / 3;
+  }
+  .transformation-stages__item_5 {
+    grid-row: 3 / 4;
+  }
+  .transformation-stages__item_6 {
+    grid-row: 4 / 5;
+  }
+  .transformation-stages__item_7 {
+    grid-column: 1 / 3;
+  }
+
+  .transformation-stages__item-img {
+    width: 250px;
+    right: 45px;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 964px) {
+  .transformation-stages__item-img {
+    width: 250px;
+    right: 45px;
+    bottom: 0;
+    transform: translateY(-25%);
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .transformation-stages__title {
+    display: flex;
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .transformation-stages__link {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .transformation-stages__title {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .transformation-stages__link {
+    max-width: fit-content;
+  }
+}
+
+@media screen and (max-width: 772px) {
+  .transformation-stages__item-img {
+    right: 15px;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .transformation-stages__content {
+    grid-template-columns: 1fr;
+  }
+
+  .transformation-stages__item_1 {
+    grid-row: 1 / 2;
+  }
+  .transformation-stages__item_2 {
+    grid-row: 2 / 3;
+  }
+  .transformation-stages__item_3 {
+    grid-row: 3 / 4;
+  }
+  .transformation-stages__item_4 {
+    grid-row: 4 / 5;
+  }
+  .transformation-stages__item_5 {
+    grid-row: 5 / 6;
+  }
+  .transformation-stages__item_6 {
+    grid-row: 6 / 7;
+  }
+  .transformation-stages__item_7 {
+    grid-row: 7 / 8;
+    grid-column: 1 / 1;
+    padding-bottom: 110px;
+
+    span {
+      margin-right: 0;
+    }
+  }
+
+  .transformation-stages__item-img {
+    width: 250px;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(25%) translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .main__transformation-stages {
+    &:not(:last-child) {
+      margin-bottom: 125px;
+    }
+  }
+
+  .transformation-stages__container {
+    gap: 0;
+  }
+
+  .transformation-stages__title {
+    display: flex;
+    flex-direction: column;
+    font-size: 36px;
+    line-height: 40px;
+    gap: 12px;
+  }
+
+  .transformation-stages__link {
+    font-size: 18px;
+    line-height: 21px;
+    max-width: 100%;
+
+    a {
+      margin-left: 1px;
+    }
+  }
+
+  .transformation-stages__content {
+    display: none;
+  }
+
+  .transformation-stages__content_mobile {
+    display: flex;
+  }
+
+  .transformation-stages__slider-control-panel {
+    display: flex;
+  }
+}
+
+/* ------------------Участники турнира/Tournament participants------------------ */
+
+.main__tournament-participants {
+  &:not(:last-child) {
+    margin-bottom: 140px;
+  }
+}
+
+.tournament-participants__container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.tournament-participants__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tournament-participants__header_mobile {
+  display: none;
+}
+
+.tournament-participants__title {
+  text-transform: uppercase;
+  font-size: 54px;
+  line-height: 65px;
+}
+
+.tournament-participants__title_mobile {
+  display: none;
+}
+
+.tournament-participants__slider-control-panel {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.tournament-participants__slider-control-panel_mobile {
+  display: none;
+}
+
+.tournament-participants__slider-controller {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 80px;
+  background-color: #313131;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #fbce51;
+  }
+
+  &:disabled {
+    background-color: #d6d6d6;
+  }
+}
+
+.tournament-participants__slider-controller_prev {
+  transform: rotate(180deg);
+}
+
+.tournament-participants__slider-counter {
+  font-family: "Golos Text", sans-serif;
+  line-height: 19px;
+  color: #949494;
+}
+
+.tournament-participants__slide-number {
+  color: #313131;
+}
+
+.tournament-participants__slider {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.tournament-participants__slider-wrapper {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.tournament-participants__slide {
+  padding: 0 37px;
+  font-family: "Golos Text", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img:not(:last-child) {
+    margin-bottom: 28px;
+  }
+}
+
+.tournament-participants__slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.tournament-participants__slide-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+}
+
+.tournament-participants__slide-text {
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+.tournament-participants__slide-button {
+  font-family: "Golos Text", sans-serif;
+  line-height: 19px;
+  padding: 7px 11px;
+  border-radius: 62px;
+  font-weight: 500;
+}
+
+.main__runline {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: #f54932;
+  padding: 12px 0px;
+  color: #fff;
+  font-weight: 400;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.main__runline-text {
+  font-size: 22px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1145px) {
+  .main__runline {
+    height: 50px;
+  }
+
+  .main__runline-text {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .tournament-participants__title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .tournament-participants__title {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .main__tournament-participants {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+  }
+  .tournament-participants__container {
+    gap: 40px;
+  }
+
+  .tournament-participants__header {
+    display: none;
+  }
+
+  .tournament-participants__header_mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .tournament-participants__title {
+    font-size: 36px;
+    line-height: 37px;
+    display: none;
+  }
+
+  .tournament-participants__title_mobile {
+    display: flex;
+  }
+
+  .tournament-participants__slide {
+    min-width: 339px;
+    white-space: nowrap;
+    padding: 0;
+
+    img:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    img {
+      width: 246px;
+    }
+  }
+
+  .tournament-participants__title {
+    order: 1;
+  }
+
+  .tournament-participants__slider {
+    order: 2;
+  }
+
+  .tournament-participants__slider-control-panel {
+    display: none;
+    order: 3;
+    justify-content: center;
+    gap: 13px;
+
+    .tournament-participants__slider-controller {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  .tournament-participants__slider-control-panel_mobile {
+    display: flex;
+  }
+
+  .main__runline {
+    height: 38px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main__runline {
+    height: 38px;
+  }
+
+  .main__runline-text {
+    font-size: 16px;
+    line-height: 17px;
+  }
+}
+
+/* ------------------Подвал/FOOTER------------------ */
+
+.footer {
+  width: 100%;
+  background-color: #e9ded4;
+}
+.footer__container {
+  padding: 42px 72px 72px;
+}
+.footer__text {
+  opacity: 0.6;
+  font-family: "Golos Text", sans-serif;
+  line-height: 19px;
+}
+
+@media screen and (max-width: 375px) {
+  .footer__container {
+    padding: 40px 20px 60px;
+  }
+}
